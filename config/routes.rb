@@ -5,6 +5,8 @@ Shopperista::Application.routes.draw do
   get 'popular', to: 'home#popular'
   get 'new', to: 'home#new'
 
+  resources :home
+
   devise_for :users
 
   resources :users, only: [:show, :index]
